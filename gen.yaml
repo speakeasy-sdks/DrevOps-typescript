@@ -2,14 +2,14 @@ configVersion: 1.0.0
 management:
   docChecksum: 481b6414953dd9fa8c25533487d46be0
   docVersion: v2
-  speakeasyVersion: 1.33.2
-  generationVersion: 2.29.0
+  speakeasyVersion: 1.34.0
+  generationVersion: 2.30.0
 generation:
   sdkClassName: SDK
   singleTagPerOp: false
   telemetryEnabled: false
 typescript:
-  version: 1.5.0
+  version: 1.6.0
   author: DrevOps
   maxMethodParams: 0
   packageName: CircleCi
