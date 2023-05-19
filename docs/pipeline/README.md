@@ -50,9 +50,9 @@ Returns a pipeline by the pipeline ID.
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  GetPipelineByIdPipelineErrorsTypeEnum,
-  GetPipelineByIdPipelineStateEnum,
-  GetPipelineByIdPipelineTriggerTypeEnum,
+  GetPipelineByIdPipelineErrorsType,
+  GetPipelineByIdPipelineState,
+  GetPipelineByIdPipelineTriggerType,
   GetPipelineByIdResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -80,9 +80,9 @@ Returns a pipeline by the pipeline number.
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  GetPipelineByNumberPipelineErrorsTypeEnum,
-  GetPipelineByNumberPipelineStateEnum,
-  GetPipelineByNumberPipelineTriggerTypeEnum,
+  GetPipelineByNumberPipelineErrorsType,
+  GetPipelineByNumberPipelineState,
+  GetPipelineByNumberPipelineTriggerType,
   GetPipelineByNumberResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -136,9 +136,9 @@ Returns a sequence of all pipelines for this project triggered by the user.
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  ListMyPipelinesPipelineListResponsePipelineErrorsTypeEnum,
-  ListMyPipelinesPipelineListResponsePipelineStateEnum,
-  ListMyPipelinesPipelineListResponsePipelineTriggerTypeEnum,
+  ListMyPipelinesPipelineListResponsePipelineErrorsType,
+  ListMyPipelinesPipelineListResponsePipelineState,
+  ListMyPipelinesPipelineListResponsePipelineTriggerType,
   ListMyPipelinesResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -167,9 +167,9 @@ Returns all pipelines for the most recently built projects (max 250) you follow 
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  ListPipelinesPipelineListResponsePipelineErrorsTypeEnum,
-  ListPipelinesPipelineListResponsePipelineStateEnum,
-  ListPipelinesPipelineListResponsePipelineTriggerTypeEnum,
+  ListPipelinesPipelineListResponsePipelineErrorsType,
+  ListPipelinesPipelineListResponsePipelineState,
+  ListPipelinesPipelineListResponsePipelineTriggerType,
   ListPipelinesResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -199,9 +199,9 @@ Returns all pipelines for this project.
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  ListPipelinesForProjectPipelineListResponsePipelineErrorsTypeEnum,
-  ListPipelinesForProjectPipelineListResponsePipelineStateEnum,
-  ListPipelinesForProjectPipelineListResponsePipelineTriggerTypeEnum,
+  ListPipelinesForProjectPipelineListResponsePipelineErrorsType,
+  ListPipelinesForProjectPipelineListResponsePipelineState,
+  ListPipelinesForProjectPipelineListResponsePipelineTriggerType,
   ListPipelinesForProjectResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -232,8 +232,8 @@ Returns a paginated list of workflows by pipeline ID.
 import { SDK } from "CircleCi";
 import {
   ListWorkflowsByPipelineIdResponse,
-  ListWorkflowsByPipelineIdWorkflowListResponseWorkflowStatusEnum,
-  ListWorkflowsByPipelineIdWorkflowListResponseWorkflowTagEnum,
+  ListWorkflowsByPipelineIdWorkflowListResponseWorkflowStatus,
+  ListWorkflowsByPipelineIdWorkflowListResponseWorkflowTag,
 } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
@@ -260,7 +260,7 @@ Triggers a new pipeline on the project.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { TriggerPipelinePipelineCreationStateEnum, TriggerPipelineResponse } from "CircleCi/dist/sdk/models/operations";
+import { TriggerPipelinePipelineCreationState, TriggerPipelineResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {

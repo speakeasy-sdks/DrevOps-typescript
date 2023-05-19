@@ -69,8 +69,8 @@ Returns summary fields of a workflow by ID.
 import { SDK } from "CircleCi";
 import {
   GetWorkflowByIdResponse,
-  GetWorkflowByIdWorkflowStatusEnum,
-  GetWorkflowByIdWorkflowTagEnum,
+  GetWorkflowByIdWorkflowStatus,
+  GetWorkflowByIdWorkflowTag,
 } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
@@ -98,8 +98,8 @@ Returns a sequence of jobs for a workflow.
 import { SDK } from "CircleCi";
 import {
   ListWorkflowJobsResponse,
-  ListWorkflowJobsWorkflowJobListResponseJobStatusEnum,
-  ListWorkflowJobsWorkflowJobListResponseJobTypeEnum,
+  ListWorkflowJobsWorkflowJobListResponseJobStatus,
+  ListWorkflowJobsWorkflowJobListResponseJobType,
 } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({

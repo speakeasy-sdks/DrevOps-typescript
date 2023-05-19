@@ -17,10 +17,10 @@ Create a webhook
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  CreateWebhookRequestBodyEventsEnum,
-  CreateWebhookRequestBodyScopeTypeEnum,
+  CreateWebhookRequestBodyEvents,
+  CreateWebhookRequestBodyScopeType,
   CreateWebhookResponse,
-  CreateWebhookWebhookEventsEnum,
+  CreateWebhookWebhookEvents,
 } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
@@ -31,12 +31,12 @@ const sdk = new SDK({
 
 sdk.webhook.createWebhook({
   events: [
-    CreateWebhookRequestBodyEventsEnum.WorkflowCompleted,
+    CreateWebhookRequestBodyEvents.WorkflowCompleted,
   ],
   name: "Vicky Lynch",
   scope: {
     id: "6b144290-7474-4778-a7bd-466d28c10ab3",
-    type: CreateWebhookRequestBodyScopeTypeEnum.Project,
+    type: CreateWebhookRequestBodyScopeType.Project,
   },
   signingSecret: "quo",
   url: "illum",
@@ -81,7 +81,7 @@ Get a webhook by id.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetWebhookByIdResponse, GetWebhookByIdWebhookEventsEnum } from "CircleCi/dist/sdk/models/operations";
+import { GetWebhookByIdResponse, GetWebhookByIdWebhookEvents } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -107,9 +107,9 @@ Get a list of webhook that match the given scope-type and scope-id
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  GetWebhooks200ApplicationJSONWebhookEventsEnum,
+  GetWebhooks200ApplicationJSONWebhookEvents,
   GetWebhooksResponse,
-  GetWebhooksScopeTypeEnum,
+  GetWebhooksScopeType,
 } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
@@ -120,7 +120,7 @@ const sdk = new SDK({
 
 sdk.webhook.getWebhooks({
   scopeId: "be61e6b7-b95b-4c0a-b3c2-0c4f3789fd87",
-  scopeType: GetWebhooksScopeTypeEnum.Project,
+  scopeType: GetWebhooksScopeType.Project,
 }).then((res: GetWebhooksResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -137,9 +137,9 @@ Update a webhook
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  UpdateWebhookRequestBodyEventsEnum,
+  UpdateWebhookRequestBodyEvents,
   UpdateWebhookResponse,
-  UpdateWebhookWebhookEventsEnum,
+  UpdateWebhookWebhookEvents,
 } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
@@ -151,7 +151,7 @@ const sdk = new SDK({
 sdk.webhook.updateWebhook({
   requestBody: {
     events: [
-      UpdateWebhookRequestBodyEventsEnum.JobCompleted,
+      UpdateWebhookRequestBodyEvents.JobCompleted,
     ],
     name: "Kirk Stracke",
     signingSecret: "eveniet",

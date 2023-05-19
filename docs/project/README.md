@@ -21,8 +21,8 @@ Creates a new checkout key. This API request is only usable with a user API toke
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  CreateCheckoutKeyCheckoutKeyCheckoutKeyTypeEnum,
-  CreateCheckoutKeyCheckoutKeyInputCheckoutKeyInputTypeEnum,
+  CreateCheckoutKeyCheckoutKeyCheckoutKeyType,
+  CreateCheckoutKeyCheckoutKeyInputCheckoutKeyInputType,
   CreateCheckoutKeyResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -34,7 +34,7 @@ const sdk = new SDK({
 
 sdk.project.createCheckoutKey({
   requestBody: {
-    type: CreateCheckoutKeyCheckoutKeyInputCheckoutKeyInputTypeEnum.DeployKey,
+    type: CreateCheckoutKeyCheckoutKeyInputCheckoutKeyInputType.DeployKey,
   },
   projectSlug: "distinctio",
 }).then((res: CreateCheckoutKeyResponse) => {
@@ -133,7 +133,7 @@ Returns an individual checkout key.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetCheckoutKeyCheckoutKeyCheckoutKeyTypeEnum, GetCheckoutKeyResponse } from "CircleCi/dist/sdk/models/operations";
+import { GetCheckoutKeyCheckoutKeyCheckoutKeyType, GetCheckoutKeyResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -185,7 +185,7 @@ Retrieves a project by project slug.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetProjectBySlugProjectVcsInfoProviderEnum, GetProjectBySlugResponse } from "CircleCi/dist/sdk/models/operations";
+import { GetProjectBySlugProjectVcsInfoProvider, GetProjectBySlugResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -211,7 +211,7 @@ Returns a sequence of checkout keys for `:project`.
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  ListCheckoutKeysCheckoutKeyListResponseCheckoutKeyCheckoutKeyTypeEnum,
+  ListCheckoutKeysCheckoutKeyListResponseCheckoutKeyCheckoutKeyType,
   ListCheckoutKeysResponse,
 } from "CircleCi/dist/sdk/models/operations";
 

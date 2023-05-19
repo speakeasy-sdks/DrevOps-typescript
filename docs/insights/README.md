@@ -73,7 +73,7 @@ Get timeseries data for all jobs within a workflow.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetJobTimeseriesGranularityEnum, GetJobTimeseriesResponse } from "CircleCi/dist/sdk/models/operations";
+import { GetJobTimeseriesGranularity, GetJobTimeseriesResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -84,7 +84,7 @@ const sdk = new SDK({
 sdk.insights.getJobTimeseries({
   branch: "enim",
   endDate: new Date("2020-02-08T20:51:42.354Z"),
-  granularity: GetJobTimeseriesGranularityEnum.Hourly,
+  granularity: GetJobTimeseriesGranularity.Hourly,
   projectSlug: "provident",
   startDate: new Date("2021-09-06T10:36:33.442Z"),
   workflowName: "blanditiis",
@@ -104,7 +104,7 @@ Gets aggregated summary metrics with trends for the entire org.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetOrgSummaryDataReportingWindowEnum, GetOrgSummaryDataResponse } from "CircleCi/dist/sdk/models/operations";
+import { GetOrgSummaryDataReportingWindow, GetOrgSummaryDataResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -120,7 +120,7 @@ sdk.insights.getOrgSummaryData({
     "natus": "omnis",
     "molestiae": "perferendis",
   },
-  reportingWindow: GetOrgSummaryDataReportingWindowEnum.Last24Hours,
+  reportingWindow: GetOrgSummaryDataReportingWindow.Last24Hours,
 }).then((res: GetOrgSummaryDataResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -137,7 +137,7 @@ Get summary metrics for a project workflow's jobs. Job runs going back at most 9
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  GetProjectWorkflowJobMetricsReportingWindowEnum,
+  GetProjectWorkflowJobMetricsReportingWindow,
   GetProjectWorkflowJobMetricsResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -152,7 +152,7 @@ sdk.insights.getProjectWorkflowJobMetrics({
   branch: "magnam",
   pageToken: "distinctio",
   projectSlug: "id",
-  reportingWindow: GetProjectWorkflowJobMetricsReportingWindowEnum.Last90Days,
+  reportingWindow: GetProjectWorkflowJobMetricsReportingWindow.Last90Days,
   workflowName: "labore",
 }).then((res: GetProjectWorkflowJobMetricsResponse) => {
   if (res.statusCode == 200) {
@@ -169,7 +169,7 @@ Get summary metrics for a project's workflows.  Workflow runs going back at most
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetProjectWorkflowMetricsReportingWindowEnum, GetProjectWorkflowMetricsResponse } from "CircleCi/dist/sdk/models/operations";
+import { GetProjectWorkflowMetricsReportingWindow, GetProjectWorkflowMetricsResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -182,7 +182,7 @@ sdk.insights.getProjectWorkflowMetrics({
   branch: "suscipit",
   pageToken: "natus",
   projectSlug: "nobis",
-  reportingWindow: GetProjectWorkflowMetricsReportingWindowEnum.Last24Hours,
+  reportingWindow: GetProjectWorkflowMetricsReportingWindow.Last24Hours,
 }).then((res: GetProjectWorkflowMetricsResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -199,7 +199,7 @@ Get recent runs of a workflow. Runs going back at most 90 days are returned. Ple
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  GetProjectWorkflowRuns200ApplicationJSONItemsStatusEnum,
+  GetProjectWorkflowRuns200ApplicationJSONItemsStatus,
   GetProjectWorkflowRunsResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -263,10 +263,7 @@ Get summary metrics and trends for a project at workflow and branch level.
 
 ```typescript
 import { SDK } from "CircleCi";
-import {
-  GetProjectWorkflowsPageDataReportingWindowEnum,
-  GetProjectWorkflowsPageDataResponse,
-} from "CircleCi/dist/sdk/models/operations";
+import { GetProjectWorkflowsPageDataReportingWindow, GetProjectWorkflowsPageDataResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -281,7 +278,7 @@ sdk.insights.getProjectWorkflowsPageData({
     "dolor": "necessitatibus",
   },
   projectSlug: "odit",
-  reportingWindow: GetProjectWorkflowsPageDataReportingWindowEnum.Last90Days,
+  reportingWindow: GetProjectWorkflowsPageDataReportingWindow.Last90Days,
   workflowNames: {
     "iure": "doloribus",
   },

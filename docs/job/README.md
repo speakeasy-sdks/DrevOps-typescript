@@ -67,7 +67,7 @@ Returns job details.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { GetJobDetailsJobDetailsStatusEnum, GetJobDetailsResponse } from "CircleCi/dist/sdk/models/operations";
+import { GetJobDetailsJobDetailsStatus, GetJobDetailsResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {

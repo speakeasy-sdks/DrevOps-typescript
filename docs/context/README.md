@@ -48,8 +48,8 @@ Create a new context
 ```typescript
 import { SDK } from "CircleCi";
 import {
-  CreateContextRequestBodyOwner1TypeEnum,
-  CreateContextRequestBodyOwner2TypeEnum,
+  CreateContextRequestBodyOwner1Type,
+  CreateContextRequestBodyOwner2Type,
   CreateContextResponse,
 } from "CircleCi/dist/sdk/models/operations";
 
@@ -63,7 +63,7 @@ sdk.context.createContext({
   name: "Edna Mante II",
   owner: {
     slug: "sed",
-    type: CreateContextRequestBodyOwner2TypeEnum.Organization,
+    type: CreateContextRequestBodyOwner2Type.Organization,
   },
 }).then((res: CreateContextResponse) => {
   if (res.statusCode == 200) {
@@ -156,7 +156,7 @@ List all contexts for an owner.
 
 ```typescript
 import { SDK } from "CircleCi";
-import { ListContextsOwnerTypeEnum, ListContextsResponse } from "CircleCi/dist/sdk/models/operations";
+import { ListContextsOwnerType, ListContextsResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
@@ -167,7 +167,7 @@ const sdk = new SDK({
 sdk.context.listContexts({
   ownerId: "b99d488e-1e91-4e45-8ad2-abd44269802d",
   ownerSlug: "ipsam",
-  ownerType: ListContextsOwnerTypeEnum.Account,
+  ownerType: ListContextsOwnerType.Account,
   pageToken: "fugit",
 }).then((res: ListContextsResponse) => {
   if (res.statusCode == 200) {
