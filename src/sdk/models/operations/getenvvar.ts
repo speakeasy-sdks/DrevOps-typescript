@@ -7,70 +7,66 @@ import { AxiosResponse } from "axios";
 import { Expose } from "class-transformer";
 
 export class GetEnvVarRequest extends SpeakeasyBase {
-  /**
-   * The name of the environment variable.
-   */
-  @SpeakeasyMetadata({
-    data: "pathParam, style=simple;explode=false;name=name",
-  })
-  name: string;
+    /**
+     * The name of the environment variable.
+     */
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
+    name: string;
 
-  /**
-   * Project slug in the form `vcs-slug/org-name/repo-name`. The `/` characters may be URL-escaped.
-   */
-  @SpeakeasyMetadata({
-    data: "pathParam, style=simple;explode=false;name=project-slug",
-  })
-  projectSlug: string;
+    /**
+     * Project slug in the form `vcs-slug/org-name/repo-name`. The `/` characters may be URL-escaped.
+     */
+    @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=project-slug" })
+    projectSlug: string;
 }
 
 /**
  * Error response.
  */
 export class GetEnvVarDefaultApplicationJSON extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  @Expose({ name: "message" })
-  message?: string;
+    @SpeakeasyMetadata()
+    @Expose({ name: "message" })
+    message?: string;
 }
 
 /**
  * The environment variable.
  */
 export class GetEnvVarEnvironmentVariablePair extends SpeakeasyBase {
-  /**
-   * The name of the environment variable.
-   */
-  @SpeakeasyMetadata()
-  @Expose({ name: "name" })
-  name: string;
+    /**
+     * The name of the environment variable.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
 
-  /**
-   * The value of the environment variable.
-   */
-  @SpeakeasyMetadata()
-  @Expose({ name: "value" })
-  value: string;
+    /**
+     * The value of the environment variable.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value: string;
 }
 
 export class GetEnvVarResponse extends SpeakeasyBase {
-  @SpeakeasyMetadata()
-  contentType: string;
+    @SpeakeasyMetadata()
+    contentType: string;
 
-  /**
-   * The environment variable.
-   */
-  @SpeakeasyMetadata()
-  environmentVariablePair?: GetEnvVarEnvironmentVariablePair;
+    /**
+     * The environment variable.
+     */
+    @SpeakeasyMetadata()
+    environmentVariablePair?: GetEnvVarEnvironmentVariablePair;
 
-  @SpeakeasyMetadata()
-  statusCode: number;
+    @SpeakeasyMetadata()
+    statusCode: number;
 
-  @SpeakeasyMetadata()
-  rawResponse?: AxiosResponse;
+    @SpeakeasyMetadata()
+    rawResponse?: AxiosResponse;
 
-  /**
-   * Error response.
-   */
-  @SpeakeasyMetadata()
-  getEnvVarDefaultApplicationJSONObject?: GetEnvVarDefaultApplicationJSON;
+    /**
+     * Error response.
+     */
+    @SpeakeasyMetadata()
+    getEnvVarDefaultApplicationJSONObject?: GetEnvVarDefaultApplicationJSON;
 }
