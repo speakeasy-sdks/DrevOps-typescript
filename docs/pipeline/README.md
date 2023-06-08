@@ -24,7 +24,7 @@ import { ContinuePipelineResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -58,7 +58,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -88,7 +88,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -114,7 +114,7 @@ import { GetPipelineConfigByIdResponse } from "CircleCi/dist/sdk/models/operatio
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -144,7 +144,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -175,7 +175,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -207,7 +207,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -238,7 +238,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -264,7 +264,7 @@ import { TriggerPipelinePipelineCreationState, TriggerPipelineResponse } from "C
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 

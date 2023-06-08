@@ -24,7 +24,7 @@ import { AddEnvironmentVariableToContextResponse } from "CircleCi/dist/sdk/model
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 

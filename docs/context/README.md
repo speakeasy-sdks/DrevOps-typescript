@@ -22,7 +22,7 @@ import { AddEnvironmentVariableToContextResponse } from "CircleCi/dist/sdk/model
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -55,7 +55,7 @@ import {
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -84,7 +84,7 @@ import { DeleteContextResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -109,7 +109,7 @@ import { DeleteEnvironmentVariableFromContextResponse } from "CircleCi/dist/sdk/
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -135,7 +135,7 @@ import { GetContextResponse } from "CircleCi/dist/sdk/models/operations";
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -160,7 +160,7 @@ import { ListContextsOwnerType, ListContextsResponse } from "CircleCi/dist/sdk/m
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
@@ -188,7 +188,7 @@ import { ListEnvironmentVariablesFromContextResponse } from "CircleCi/dist/sdk/m
 
 const sdk = new SDK({
   security: {
-    apiKeyHeader: "YOUR_API_KEY_HERE",
+    apiKeyHeader: "",
   },
 });
 
